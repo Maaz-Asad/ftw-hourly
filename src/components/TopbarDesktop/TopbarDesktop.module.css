@@ -79,6 +79,7 @@
   display: inline-block;
   margin: 28px 0;
   text-decoration: inherit;
+  display: none;
 
   @media (--viewportMedium) {
     font-weight: var(--fontWeightMedium);

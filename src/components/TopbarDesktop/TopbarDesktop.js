@@ -19,6 +19,8 @@ import {
 import { TopbarSearchForm } from '../../forms';
 
 import css from './TopbarDesktop.module.css';
+import css1 from '../../components/Footer/Footer.module.css';
+
 
 const TopbarDesktop = props => {
   const {
@@ -143,6 +145,31 @@ const TopbarDesktop = props => {
     </NamedLink>
   );
 
+  const aboutus = (
+    <NamedLink name="CMSPage" params={{ pageId: 'about' }} className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="Footer.toAboutPage" />
+      </span>
+    </NamedLink>
+  );
+
+  const becomevendor = (
+    <NamedLink name="CMSPage" params={{ pageId: 'about' }} className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="TopbarDesktop.becomevendor" />
+      </span>
+    </NamedLink>
+  );
+
+  const howitworks = (
+    <NamedLink name="CMSPage" params={{ pageId: 'about' }} className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="TopbarDesktop.howitworks" />
+      </span>
+    </NamedLink>
+  );
+  
+
   const listingLink =
     authenticatedOnClientSide && currentUserListingFetched && currentUserListing ? (
       <ListingLink
@@ -175,8 +202,12 @@ const TopbarDesktop = props => {
         />
       </NamedLink>
       {search}
-      {listingLink}
-      {createListingLink}
+      {aboutus}
+      {howitworks}
+      {becomevendor}
+      {/* {contactus} */}
+      {/* {listingLink} */}
+      {/* {createListingLink} */}
       {inboxLink}
       {profileMenu}
       {signupLink}

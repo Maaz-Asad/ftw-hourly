@@ -179,6 +179,7 @@ export class AuthenticationPageComponent extends Component {
           to: fromState,
         },
       },
+      
     ];
 
     const handleSubmitSignup = values => {
